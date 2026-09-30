@@ -1,4 +1,4 @@
-"""提出対象6プログラムの意味・計画・抽象資源を検証する。"""
+"""対象6プログラムの意味・実行計画・抽象資源を検証する。"""
 from __future__ import annotations
 
 import cmath
@@ -143,7 +143,7 @@ def _gates(program: Program) -> list[LoweredOp]:
 
 
 class SubmissionTest(unittest.TestCase):
-    """公開スナップショットだけで動く意味・構造・資源検証。"""
+    """外部fixtureを使わない意味・構造・資源の検証。"""
 
     def assert_valid_trace(self, trace: list, metrics: dict, slots: int) -> None:
         """終了状態と時間区間から抽象資源の排他性を独立に検査する。"""
